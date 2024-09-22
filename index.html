@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Converter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="flex">
+        <img src="./logo.png" alt="Logo">
+        <h1>Number Converter</h1>
+    </header>
+
+    <div class="container">
+        <div class="swipe-content">
+            <div class="relative">
+                <div class="content flex space-between" onclick="viewPopup()">
+                    <span id="inputType" class="disable">Select Type</span>
+                    <span class="arrow-up" id="up"></span>
+                </div>
+                <div class="content-type" id="viewType">
+                    <span class="content" onclick="setType('decimal')">Decimal</span>
+                    <span class="content" onclick="setType('binary')">Binary</span>
+                </div>
+                <input type="text" id="numberInput" placeholder="Enter number" oninput="convertNumber()"
+                    autocomplete="off">
+            </div>
+
+            <div style="font-size: 2rem;text-align: center;">To</div>
+
+            <div>
+                <div class="content" id="output-content">Output</div>
+                <input type="text" id="output" placeholder="Converted number" readonly>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by <a href="https://github.com/AjayDumaraliya19"> Ajay Dumaraliya</a> ♥️</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
